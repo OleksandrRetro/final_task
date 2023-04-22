@@ -1,0 +1,17 @@
+# docker-compose.yml
+
+version: '2'
+services:
+  app:
+    build: .
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_URL: postgresql://dbuser:dbpass@db_pg:5432/postgres
+    links:
+      - db_pg
+
+  db_pg:
+    image: postgres:13.4-alpine
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpass

@@ -1,7 +1,4 @@
 pytest
 pytest-xdist
-selenium
-webdriver_manager
-requests
 SQLAlchemy==1.3.6
 psycopg2
