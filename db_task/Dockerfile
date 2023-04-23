@@ -1,6 +1,4 @@
-# Dockerfile
-
-FROM python:3.8.8
+ROM python:3.8.8
 
 WORKDIR /usr/src/app
 
